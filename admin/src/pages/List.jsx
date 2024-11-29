@@ -29,7 +29,7 @@ const List = ({token}) => {
 
   const removeProduct = async (id) => {
     try {
-      const response = await axios.delete(backendUrl + "api/product/remove", {data : {id}, headers : {token}});
+      const response = await axios.delete(backendUrl + "/api/product/remove", {data : {id}, headers : {token}});
       if (response.data.success) {
         toast.success(response.data.message);
         await fetchList();
