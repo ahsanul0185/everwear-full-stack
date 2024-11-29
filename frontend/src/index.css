@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: "Jost", serif;
+}
+
+.philosopher-regular {
+    font-family: "Philosopher", serif;
+  }
+  
+  .philosopher-bold {
+    font-family: "Philosopher", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+.section-padding {
+    @apply px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw];
+  }
+  
+
+a.active hr {
+    display: block;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width:640px) {
+  a.active {
+   background-color: black; 
+   color: white;
+  }
+}
+
