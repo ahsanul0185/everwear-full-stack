@@ -27,8 +27,6 @@ const corsOptions = {
     allowedHeaders: ['Content-Type', 'Authorization'] // Specify allowed headers
   };
 
-
-
 // middlewares
 app.use(express.json());
 app.use(cors(corsOptions));
