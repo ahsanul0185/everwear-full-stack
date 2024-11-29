@@ -13,23 +13,23 @@ const app = express()
 const port = process.env.PORT || 4000
 
 
-// CORS configuration
-const corsOptions = {
-    origin: function (origin, callback) {
-      if (allowedOrigins.includes(origin) || !origin) {
-        // Allow requests from the frontend or if there's no origin (e.g., from Postman)
-        callback(null, true);
-      } else {
-        callback(new Error('Not allowed by CORS'));
-      }
-    },
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify the allowed methods
-    allowedHeaders: ['Content-Type', 'Authorization'] // Specify allowed headers
-  };
+// // CORS configuration
+// const corsOptions = {
+//     origin: function (origin, callback) {
+//       if (allowedOrigins.includes(origin) || !origin) {
+//         // Allow requests from the frontend or if there's no origin (e.g., from Postman)
+//         callback(null, true);
+//       } else {
+//         callback(new Error('Not allowed by CORS'));
+//       }
+//     },
+//     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify the allowed methods
+//     allowedHeaders: ['Content-Type', 'Authorization'] // Specify allowed headers
+//   };
 
 // middlewares
 app.use(express.json());
-app.use(cors(corsOptions));
+app.use(cors());
 
 // api endpoints
 app.use('/api/user', userRouter);
